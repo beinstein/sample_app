@@ -1,10 +1,12 @@
 SampleApp::Application.routes.draw do
 
+#for REST pages
   resources :users
   match '/signup', :to => 'users#new'
 
   root :to => "pages#home"
 
+# for static pages
   match '/contact', :to => 'pages#contact'
   match '/about', :to => 'pages#about'
   match '/help', :to => 'pages#help'
