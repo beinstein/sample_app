@@ -1,2 +1,9 @@
 require 'autotest/growl'
 require 'autotest/fsevent'
+require 'autotest/timestamp'
+
+# .autotest - to fix
+Autotest.add_hook :initialize do |at|
+  # Gemfile.lock is causing cucumber to run infinitely. Don't watch it.
+  at.add_exception(%r{^\./Gemfile.lock})
+end
