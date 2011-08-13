@@ -3,5 +3,6 @@
 	This is a home page for the
 	<a href="http://railstutorial.org/">Ruby On Rails Tutorial</a> sample application.
 </p>
-
-<%= link_to "Sign Up Now!", signup_path, :class => "signup_button round" %>
+<% if !signed_in? %>
+	<%= link_to "Sign Up Now!", signup_path, :class => "signup_button round" %>
+<% end %>
