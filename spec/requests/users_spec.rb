@@ -58,5 +58,17 @@ describe "Users" do
     end
 
   end
+  
+  # describe "delete" do
+  # 
+  #    describe "when admin" do
+  #      it "should not delete itself" do
+  #        user = User.new
+  #        integration_sign_in(user)
+  #        response.should have_selector("div.flash.error", :content => "Invalid")
+  #      end
+  #    end
+  # 
+  #  end
 
 end
