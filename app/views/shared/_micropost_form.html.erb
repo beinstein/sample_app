@@ -5,5 +5,7 @@
 	</div>
 	<div class="actions">
 		<%= f.submit "Submit" %>
+		<span id="micropost_content_count"></span> characters remaining
+		<%= character_count("micropost_content", "micropost_content_count") %>
 	</div>
 <% end %>
